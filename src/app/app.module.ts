@@ -31,8 +31,8 @@ import { LoginComponent } from './login';
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
-        // provider used to create fake backend
-        fakeBackendProvider
+        // provider used to create fake backend - comentqar abaixo para usar o backend real
+        // fakeBackendProvider
     ],
     bootstrap: [AppComponent]
 })
