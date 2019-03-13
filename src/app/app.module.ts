@@ -14,25 +14,47 @@ import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
 
+import { VeiculosComponent } from './veiculos/veiculos.component';
+import { RecadosComponent } from './recados/recados.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { MoradoresVisitantesComponent } from './moradores-visitantes/moradores-visitantes.component';
+import { OcorrenciasComponent } from './ocorrencias/ocorrencias.component';
+import { RelatoriosComponent } from './relatorios/relatorios.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { AppMaterialModule } from './app-material/app-material.module';
+
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        routing
+        routing,
+        AppMaterialModule
     ],
     declarations: [
         AppComponent,
         HomeComponent,
         AdminComponent,
-        LoginComponent
+        LoginComponent,
+        VeiculosComponent,
+        RecadosComponent,
+        EventosComponent,
+        MoradoresVisitantesComponent,
+        OcorrenciasComponent,
+        RelatoriosComponent,
+        SobreComponent,
+        AjudaComponent,
+        UsuariosComponent
+
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // provider used to create fake backend - comentqar abaixo para usar o backend real
-        // fakeBackendProvider
+        fakeBackendProvider
     ],
     bootstrap: [AppComponent]
 })
