@@ -1,4 +1,5 @@
-﻿import { NgModule } from '@angular/core';
+﻿import { AjudaComponent } from './ajuda/ajuda.component';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -25,7 +26,8 @@ import { LoginComponent } from './login';
         AppComponent,
         HomeComponent,
         AdminComponent,
-        LoginComponent
+        LoginComponent,
+        AjudaComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -1,4 +1,5 @@
-﻿import { Routes, RouterModule } from '@angular/router';
+﻿import { AjudaComponent } from './ajuda/ajuda.component';
+import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
@@ -22,7 +23,10 @@ const appRoutes: Routes = [
         path: 'login',
         component: LoginComponent
     },
-
+    {
+        path: 'ajuda',
+        component: AjudaComponent 
+    },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
