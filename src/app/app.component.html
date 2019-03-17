@@ -1,6 +1,6 @@
-﻿
-<header> 
-<div class="container-fluid">
+﻿<div> 
+<header class="header"> 
+
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -9,17 +9,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" routerLink="">Sistema Condominio</a>
+          <a class="navbar-brand" routerLink="/">LOGO</a>
         </div>
         <div class="navbar" id="myNavbar">
           <ul class="nav navbar-nav">
             <li> <a routerLink="/">Home</a></li>
             <li> <a routerLink="/morador" routerLinkActive="router-link-active">Moradores-Visitantes</a></li>
-            <li> <a routerLink="/veiculos" routerLinkActive="router-link-active">Veículos</a></li>
+            <li> <a routerLink="/veiculo" routerLinkActive="router-link-active">Veículos</a></li>
             <li> <a routerLink="/recados" routerLinkActive="router-link-active">Recados</a></li>
             <li> <a routerLink="/eventos" routerLinkActive="router-link-active">Eventos</a></li>
             <li> <a routerLink="/ocorrencias" routerLinkActive="router-link-active">Ocorrências</a></li>
-
             <li> <a routerLink="/relatorios" routerLinkActive="router-link-active" *ngIf="isAdmin">Relatorios</a></li>
             <li> <a routerLink="/sobre" routerLinkActive="router-link-active">Sobre</a></li>
             <li> <a routerLink="/ajuda" routerLinkActive="router-link-active">Ajuda</a></li>
@@ -28,23 +27,27 @@
            <!-- <li> <a (click)="logout()">Logout</a></li> --> 
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a routerLink="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a routerLink="register"><span class="glyphicon glyphicon-user"></span> Registrar</a></li>
             <li><a (click)="logout()" ><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    </div>
-
   </header>
-
-<div class="container">  <router-outlet></router-outlet> </div>
-       
-
+</div>
+      
+<div class="container">
+    <div class="row">
+        <div class="col" style="margin-top:10vh;">
+            
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
 
 <!-- credits -->
 <footer class="footer">
   <div class="container">
-    <p class="text-muted">Place sticky footer content here.</p>
+    <p class="text-muted">dados do rodapé aqui.</p>
   </div>
 </footer>

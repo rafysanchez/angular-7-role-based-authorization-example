@@ -7,6 +7,7 @@ import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
 import { AuthGuard } from './_guards';
 import { Role } from './_models';
+import { VeiculoComponent } from './Veiculos';
 
 const appRoutes: Routes = [
     {
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
     {
         path: 'morador',
         component: MoradorComponent 
+    },
+    {
+        path: 'veiculo',
+        component: VeiculoComponent 
     },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
