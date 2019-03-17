@@ -2,9 +2,21 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" routerLink="/ajuda" routerLinkActive="router-link-active" >ajuda</a>
+        <a class="nav-item nav-link" routerLink="/morador" routerLinkActive="router-link-active" >Moradores-Visitantes</a>
+        <a class="nav-item nav-link" routerLink="/veiculos" routerLinkActive="router-link-active" >Veículos</a>
+        <a class="nav-item nav-link" routerLink="/recados" routerLinkActive="router-link-active" >Recados</a>
+        <a class="nav-item nav-link" routerLink="/eventos" routerLinkActive="router-link-active" >Eventos</a>
+        <a class="nav-item nav-link" routerLink="/ocorrencias" routerLinkActive="router-link-active" >Ocorrências</a>
+
+        <a class="nav-item nav-link" routerLink="/relatorios" routerLinkActive="router-link-active" *ngIf="isAdmin">Relatorios</a>
+        <a class="nav-item nav-link" routerLink="/sobre" routerLinkActive="router-link-active" >Sobre</a>
+        <a class="nav-item nav-link" routerLink="/ajuda" routerLinkActive="router-link-active" >Ajuda</a>
         <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Admin</a>
+        
         <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    
+    
+    
     </div>
 </nav>
 
@@ -21,10 +33,8 @@
 
 <!-- credits -->
 <div class="text-center">
+
     <p>
-        <a href="http://jasonwatmore.com/post/2018/11/22/angular-7-role-based-authorization-tutorial-with-example" target="_top">Angular 7 - Role Based Authorization Tutorial with Example</a>
-    </p>
-    <p>
-        <a href="http://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+        rodapé
     </p>
 </div>

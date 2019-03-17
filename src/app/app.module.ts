@@ -1,4 +1,5 @@
-﻿import { AjudaComponent } from './ajuda/ajuda.component';
+﻿import { MoradorComponent } from './Moradores/morador.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,7 +28,8 @@ import { LoginComponent } from './login';
         HomeComponent,
         AdminComponent,
         LoginComponent,
-        AjudaComponent
+        AjudaComponent,
+        MoradorComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

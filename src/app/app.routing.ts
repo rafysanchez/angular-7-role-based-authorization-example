@@ -1,4 +1,5 @@
-﻿import { AjudaComponent } from './ajuda/ajuda.component';
+﻿import { MoradorComponent } from './Moradores/morador.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home';
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
     {
         path: 'ajuda',
         component: AjudaComponent 
+    },
+    {
+        path: 'morador',
+        component: MoradorComponent 
     },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
