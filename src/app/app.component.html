@@ -1,40 +1,50 @@
-﻿<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" routerLink="/morador" routerLinkActive="router-link-active" >Moradores-Visitantes</a>
-        <a class="nav-item nav-link" routerLink="/veiculos" routerLinkActive="router-link-active" >Veículos</a>
-        <a class="nav-item nav-link" routerLink="/recados" routerLinkActive="router-link-active" >Recados</a>
-        <a class="nav-item nav-link" routerLink="/eventos" routerLinkActive="router-link-active" >Eventos</a>
-        <a class="nav-item nav-link" routerLink="/ocorrencias" routerLinkActive="router-link-active" >Ocorrências</a>
-
-        <a class="nav-item nav-link" routerLink="/relatorios" routerLinkActive="router-link-active" *ngIf="isAdmin">Relatorios</a>
-        <a class="nav-item nav-link" routerLink="/sobre" routerLinkActive="router-link-active" >Sobre</a>
-        <a class="nav-item nav-link" routerLink="/ajuda" routerLinkActive="router-link-active" >Ajuda</a>
-        <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Admin</a>
-        
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
-    
-    
-    
-    </div>
-</nav>
-
-<!-- main app container -->
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <router-outlet></router-outlet>
-            </div>
+﻿
+<header> 
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" routerLink="">Sistema Condominio</a>
         </div>
+        <div class="navbar" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li> <a routerLink="/">Home</a></li>
+            <li> <a routerLink="/morador" routerLinkActive="router-link-active">Moradores-Visitantes</a></li>
+            <li> <a routerLink="/veiculos" routerLinkActive="router-link-active">Veículos</a></li>
+            <li> <a routerLink="/recados" routerLinkActive="router-link-active">Recados</a></li>
+            <li> <a routerLink="/eventos" routerLinkActive="router-link-active">Eventos</a></li>
+            <li> <a routerLink="/ocorrencias" routerLinkActive="router-link-active">Ocorrências</a></li>
+
+            <li> <a routerLink="/relatorios" routerLinkActive="router-link-active" *ngIf="isAdmin">Relatorios</a></li>
+            <li> <a routerLink="/sobre" routerLinkActive="router-link-active">Sobre</a></li>
+            <li> <a routerLink="/ajuda" routerLinkActive="router-link-active">Ajuda</a></li>
+            <li> <a routerLink="/admin" *ngIf="isAdmin">Admin</a></li>
+
+           <!-- <li> <a (click)="logout()">Logout</a></li> --> 
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a (click)="logout()" ><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     </div>
-</div>
+
+  </header>
+
+<div class="container">  <router-outlet></router-outlet> </div>
+       
+
 
 <!-- credits -->
-<div class="text-center">
-
-    <p>
-        rodapé
-    </p>
-</div>
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">Place sticky footer content here.</p>
+  </div>
+</footer>
