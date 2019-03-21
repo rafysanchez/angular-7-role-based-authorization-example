@@ -12,7 +12,11 @@ export class PersonService {
         { id: 1,  firstName: 'Admin', lastName: 'Portamel' },
         { id: 2,  firstName: 'Normal', lastName: 'RadjaM' },
         { id: 3,  firstName: 'ZAGO', lastName: 'ULMANN' },
-        { id: 4,  firstName: 'Caye', lastName: 'Zilma' }
+        { id: 4,  firstName: 'Caye', lastName: 'Zilma' },
+        { id: 5,  firstName: 'CARLOS', lastName: 'ULMANN' },
+        { id: 6,  firstName: 'ASAS', lastName: 'BROAS' },
+        { id: 7,  firstName: 'PIPA', lastName: 'ZILMA' },
+        { id: 8,  firstName: 'XERA', lastName: 'ZANA' }
     ];
     constructor(private http: HttpClient) {   }
 
