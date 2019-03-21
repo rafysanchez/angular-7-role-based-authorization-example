@@ -1,4 +1,5 @@
-﻿import { MoradorComponent } from './Moradores/morador.component';
+﻿import { PersonService } from '@/_services';
+import { MoradorComponent } from './Moradores/morador.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,7 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
-import { VeiculoComponent } from './Veiculos';
+import { VeiculoComponent } from './Veiculos/veiculo.component';
 
 @NgModule({
     imports: [
@@ -38,7 +39,7 @@ import { VeiculoComponent } from './Veiculos';
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
+        PersonService,
         // provider used to create fake backend
         fakeBackendProvider
     ],

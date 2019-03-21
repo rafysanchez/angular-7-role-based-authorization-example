@@ -7,7 +7,7 @@
     },
     "scripts": {
         "build": "webpack --mode production",
-        "start": "webpack-dev-server --mode development --open"
+        "start": "webpack-dev-server --mode development --proxy-config proxy.js --open"
         
     },
     "license": "MIT",
