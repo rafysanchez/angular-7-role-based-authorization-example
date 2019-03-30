@@ -4,13 +4,16 @@
     <th>ID</th>
     <th>First name</th>
     <th>Last name</th>
+<th>Ações</th>
+
   </tr>
 </thead>
 <tbody>
   <tr *ngFor="let person of persons">
-    <td>{{ person.id }}</td>
+    <td>{{ C }}</td>
     <td>{{ person.firstName }}</td>
     <td>{{ person.lastName }}</td>
+    <td><i class="far fa-edit" (click)="editRow(person)" ></i> | <i class="far fa-trash-alt" (click)="deleteRow(person)"></i></td>
   </tr>
 </tbody>
 </table>

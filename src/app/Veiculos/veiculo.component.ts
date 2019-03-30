@@ -45,4 +45,13 @@ export class VeiculoComponent implements OnDestroy, OnInit {
     
    };
 
+   editRow (valor: Person)
+   {
+        console.log(valor);
+   }
+
+   deleteRow(valor: Person){
+    console.log(valor); 
+   }
+
 }

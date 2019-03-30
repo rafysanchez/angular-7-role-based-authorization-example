@@ -6,6 +6,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DataTablesModule } from 'angular-datatables';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
 
@@ -24,7 +27,8 @@ import { VeiculoComponent } from './Veiculos/veiculo.component';
         ReactiveFormsModule,
         HttpClientModule,
         routing,
-        DataTablesModule
+        DataTablesModule,
+        NgbModule
     ],
     declarations: [
         AppComponent,
