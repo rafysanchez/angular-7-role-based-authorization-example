@@ -1,10 +1,13 @@
-﻿import { Routes, RouterModule } from '@angular/router';
+﻿import { MoradorComponent } from './Moradores/morador.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
+import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
 import { AuthGuard } from './_guards';
 import { Role } from './_models';
+import { VeiculoComponent } from './Veiculos';
 
 const appRoutes: Routes = [
     {
@@ -22,7 +25,18 @@ const appRoutes: Routes = [
         path: 'login',
         component: LoginComponent
     },
-
+    {
+        path: 'ajuda',
+        component: AjudaComponent 
+    },
+    {
+        path: 'morador',
+        component: MoradorComponent 
+    },
+    {
+        path: 'veiculo',
+        component: VeiculoComponent 
+    },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];

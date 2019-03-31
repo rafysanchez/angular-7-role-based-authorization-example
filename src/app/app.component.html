@@ -1,29 +1,50 @@
-﻿<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Admin</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
-    </div>
-</nav>
+﻿
 
-<!-- main app container -->
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <router-outlet></router-outlet>
-            </div>
+<div> 
+<header class="header"> 
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+      <img src="./asset/bird.jpg" alt="logo" style="width:60px;">
+    </a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li> <a routerLink="/">Home</a></li>
+            <li> <a routerLink="/morador" routerLinkActive="router-link-active">Moradores-Visitantes</a></li>
+            <li> <a routerLink="/veiculo" routerLinkActive="router-link-active">Veículos</a></li>
+            <li> <a routerLink="/recados" routerLinkActive="router-link-active">Recados</a></li>
+            <li> <a routerLink="/eventos" routerLinkActive="router-link-active">Eventos</a></li>
+            <li> <a routerLink="/ocorrencias" routerLinkActive="router-link-active">Ocorrências</a></li>
+            <li> <a routerLink="/relatorios" routerLinkActive="router-link-active" *ngIf="isAdmin">Relatorios</a></li>
+            <li> <a routerLink="/sobre" routerLinkActive="router-link-active">Sobre</a></li>
+            <li> <a routerLink="/ajuda" routerLinkActive="router-link-active">Ajuda</a></li>
+            <li> <a routerLink="/admin" *ngIf="isAdmin">Admin</a></li>
+
+           <!-- <li> <a (click)="logout()">Logout</a></li> --> 
+   
+      <li><a routerLink="register"><span class="glyphicon glyphicon-user"></span> Registrar</a></li>
+      <li><a routerLink="" (click)="logout()" ><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+   
+    </ul>
+  </nav>
+
+  </header>
+</div>
+      
+<div class="container">
+    <div class="row">
+        <div class="col" style="margin-top:10vh;">
+            
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
 
 <!-- credits -->
-<div class="text-center">
-    <p>
-        <a href="http://jasonwatmore.com/post/2018/11/22/angular-7-role-based-authorization-tutorial-with-example" target="_top">Angular 7 - Role Based Authorization Tutorial with Example</a>
-    </p>
-    <p>
-        <a href="http://jasonwatmore.com" target="_top">JasonWatmore.com</a>
-    </p>
-</div>
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">dados do rodapé aqui.</p>
+  </div>
+</footer>
