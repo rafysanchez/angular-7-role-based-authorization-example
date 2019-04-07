@@ -8,6 +8,7 @@ import { LoginComponent } from './login';
 import { AuthGuard } from './_guards';
 import { Role } from './_models';
 import { VeiculoComponent } from './Veiculos';
+import { RecadosComponent } from './Recados';
 
 const appRoutes: Routes = [
     {
@@ -32,6 +33,10 @@ const appRoutes: Routes = [
     {
         path: 'morador',
         component: MoradorComponent 
+    },
+    {
+        path: 'recados',
+        component: RecadosComponent 
     },
     {
         path: 'veiculo',

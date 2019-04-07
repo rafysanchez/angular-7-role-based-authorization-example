@@ -1,4 +1,5 @@
-﻿import { PersonService } from '@/_services';
+﻿import { RecadosComponent } from './Recados/recados.component';
+import { PersonService } from '@/_services';
 import { MoradorComponent } from './Moradores/morador.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { NgModule } from '@angular/core';
@@ -37,7 +38,8 @@ import { VeiculoComponent } from './Veiculos/veiculo.component';
         LoginComponent,
         AjudaComponent,
         MoradorComponent,
-        VeiculoComponent
+        VeiculoComponent,
+        RecadosComponent
        
     ],
     providers: [

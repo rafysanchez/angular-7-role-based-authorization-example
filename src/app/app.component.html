@@ -3,20 +3,20 @@
 <div> 
 <header class="header"> 
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" *ngIf="currentUser">
     <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#"> 
       <img src="./asset/bird.jpg" alt="logo" style="width:60px;">
     </a>
     
     <!-- Links -->
     <ul class="navbar-nav">
       <li> <a routerLink="/">Home</a></li>
-            <li> <a routerLink="/morador" routerLinkActive="router-link-active">Moradores-Visitantes</a></li>
+            <li> <a routerLink="/morador" routerLinkActive="router-link-active">Usuários</a></li>
             <li> <a routerLink="/veiculo" routerLinkActive="router-link-active">Veículos</a></li>
             <li> <a routerLink="/recados" routerLinkActive="router-link-active">Recados</a></li>
             <li> <a routerLink="/eventos" routerLinkActive="router-link-active">Eventos</a></li>
-            <li> <a routerLink="/ocorrencias" routerLinkActive="router-link-active">Ocorrências</a></li>
+            <li> <a routerLink="/ocorrencias" routerLinkActive="router-link-active" *ngIf="isAdmin">Ocorrências</a></li>
             <li> <a routerLink="/relatorios" routerLinkActive="router-link-active" *ngIf="isAdmin">Relatorios</a></li>
             <li> <a routerLink="/sobre" routerLinkActive="router-link-active">Sobre</a></li>
             <li> <a routerLink="/ajuda" routerLinkActive="router-link-active">Ajuda</a></li>
